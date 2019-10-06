@@ -60,6 +60,7 @@ def hideMe(url, filename):
     # content type should anything but html
     d = "text/html; charset=UTF-8"
     n = 0
+    # Connecting in a loop till our death or server responds lol.
     with open(filename, 'wb') as f:
         while(d == "text/html; charset=UTF-8"):
             n += 1
@@ -72,7 +73,7 @@ def hideMe(url, filename):
             d = response.headers.get('content-type')
 
             print(f"Trying... {n}")
-            print(response.headers)
+            #print(response.headers)
         total = response.headers.get('content-length')
 
         if total is None:
