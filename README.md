@@ -8,5 +8,5 @@ or
 ```python
 import hidelmo
 
-HideMe("https:\\www.example.com", "file_name.ext")
+hideMe("https:\\www.example.com", "file_name.ext")
 ```
